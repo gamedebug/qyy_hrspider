@@ -60,4 +60,4 @@ with codecs.open('sample.html','w','utf-8') as html_file:
 with open('sample.txt', 'r+') as f:
     content = f.read()        
     f.seek(0, 0)
-    f.write('writer:Fatsheep\n'+'<meta charset="UTF-8">')
+    f.write('<meta charset="UTF-8">'+content)

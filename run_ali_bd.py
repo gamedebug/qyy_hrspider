@@ -55,4 +55,9 @@ wb.save(newTable)
 xd = pd.ExcelFile('alibaba_bd.xls')
 df = xd.parse()
 with codecs.open('alibaba_bd.html','w','utf-8') as html_file:
-        html_file.write(df.to_html(header = True,index = False))
+    html_file.write(df.to_html(header = True,index = False))
+
+with open('alibaba_bd.html', 'r+') as f:
+    content = f.read()
+    f.seek(0, 0)
+    f.write('<meta charset="UTF-8">'+content)
