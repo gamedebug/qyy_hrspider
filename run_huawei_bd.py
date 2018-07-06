@@ -16,7 +16,6 @@
 from liepin_spider import LiepinSpider
 import sys
 import xlwt
-import string
 import pandas as pd
 import codecs
 
