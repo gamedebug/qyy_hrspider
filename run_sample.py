@@ -54,7 +54,7 @@ for page_num in range(0, spider.page_num(url)):
 excel_write(items,index)
 wb.save(newTable)
 
-xd = pd.ExcelFile('results.xls')
+xd = pd.ExcelFile('sample.xls')
 df = xd.parse()
 with codecs.open('sample.html','w','gb2312') as html_file:
         html_file.write(df.to_html(header = True,index = False))
