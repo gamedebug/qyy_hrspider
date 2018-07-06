@@ -14,6 +14,7 @@ Python 3
 - **包支持:**
 pandas
 xlwt
+codecs
 
 
 ----------
