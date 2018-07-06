@@ -27,5 +27,5 @@
 
 
 **Ver20180707**
-支持：当前只支持从猎聘 (www.liepin.com) 抓取信息；
-缺陷：生成的html在苹果Safari浏览器上会显示乱码（Chrome、Firefox、Opera测试无异常）；搜索条目大于1500条时，生成html会报编码错误，但生成Excel表格无异常。
+- 支持：当前只支持从猎聘 (www.liepin.com) 抓取信息；
+- 缺陷：生成的html在苹果Safari浏览器上会显示乱码（Chrome、Firefox、Opera测试无异常）；搜索条目大于1500条时，生成html会报编码错误，但生成Excel表格无异常。
