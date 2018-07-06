@@ -25,9 +25,9 @@ import codecs
 
 spider = LiepinSpider()
 
-url = 'https://www.liepin.com/zhaopin/?compIds=884492&ckid=f7fe680df72a13dc&fromSearchBtn=2&init=-1&sfrom=click-pc_homepage-centre_searchbox-search_new&flushckid=1&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&headckid=f7fe680df72a13dc&d_pageSize=40&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_headId=b9ec8fc0c312e3c126e007a3872a082c&d_ckId=b9ec8fc0c312e3c126e007a3872a082c&d_sfrom=search_fp&d_curPage=0'
+url = 'https://www.liepin.com/zhaopin/?pubTime=&ckid=503fd36933026680&fromSearchBtn=2&compkind=&isAnalysis=&init=-1&searchType=1&dqs=&industryType=&jobKind=&sortFlag=15&degradeFlag=0&industries=&salary=&compscale=&key=Linux&clean_condition=&headckid=503fd36933026680&d_pageSize=40&siTag=7cnwpaXVd5e_aONzZHQ4MQ~fA9rXquZc5IkJpXC-Ycixw&d_headId=d5aaad8a9e4109a2682db2e5e7b0a2e6&d_ckId=d5aaad8a9e4109a2682db2e5e7b0a2e6&d_sfrom=search_prime&d_curPage=0&curPage=0'
 
-url_head = 'https://www.liepin.com/zhaopin/?compIds=884492&ckid=f7fe680df72a13dc&fromSearchBtn=2&init=-1&sfrom=click-pc_homepage-centre_searchbox-search_new&flushckid=1&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&headckid=f7fe680df72a13dc&d_pageSize=40&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_headId=b9ec8fc0c312e3c126e007a3872a082c&d_ckId=b9ec8fc0c312e3c126e007a3872a082c&d_sfrom=search_fp&d_curPage='
+url_head = 'https://www.liepin.com/zhaopin/?pubTime=&ckid=503fd36933026680&fromSearchBtn=2&compkind=&isAnalysis=&init=-1&searchType=1&dqs=&industryType=&jobKind=&sortFlag=15&degradeFlag=0&industries=&salary=&compscale=&key=Linux&clean_condition=&headckid=503fd36933026680&d_pageSize=40&siTag=7cnwpaXVd5e_aONzZHQ4MQ~fA9rXquZc5IkJpXC-Ycixw&d_headId=d5aaad8a9e4109a2682db2e5e7b0a2e6&d_ckId=d5aaad8a9e4109a2682db2e5e7b0a2e6&d_sfrom=search_prime&d_curPage=0&curPage='
 
 def excel_write(items,index):
     for item in items:
@@ -37,7 +37,7 @@ def excel_write(items,index):
         index+=1
 
 
-newTable="results.xls"
+newTable="sample.xls"
 wb = xlwt.Workbook(encoding='utf-8')
 ws = wb.add_sheet('sheet1')
 headData = ['职位', '链接', '薪资', '发布时间', '公司']
@@ -56,5 +56,5 @@ wb.save(newTable)
 
 xd = pd.ExcelFile('results.xls')
 df = xd.parse()
-with codecs.open('results.html','w','gb2312') as html_file:
+with codecs.open('sample.html','w','gb2312') as html_file:
         html_file.write(df.to_html(header = True,index = False))
