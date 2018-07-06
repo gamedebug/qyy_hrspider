@@ -55,4 +55,9 @@ wb.save(newTable)
 xd = pd.ExcelFile('sample.xls')
 df = xd.parse()
 with codecs.open('sample.html','w','utf-8') as html_file:
-        html_file.write(df.to_html(header = True,index = False))
+    html_file.write(df.to_html(header = True,index = False))
+
+with open('sample.txt', 'r+') as f:
+    content = f.read()        
+    f.seek(0, 0)
+    f.write('writer:Fatsheep\n'+'<meta charset="UTF-8">')
