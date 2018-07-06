@@ -23,9 +23,9 @@ import codecs
 
 spider = LiepinSpider()
 
-url = 'https://www.liepin.com/zhaopin/?pubTime=&ckid=c99d18de175b6fcc&fromSearchBtn=2&compkind=&searchType=1&dqs=&compIds=2036768&jobKind=&sortFlag=15&salary=&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&headckid=b477f3060083bfdc&isAnalysis=&init=-1&industryType=&degradeFlag=0&industries=&compscale=&clean_condition=&d_pageSize=40&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_headId=a9a54a63b6466b81a581384304f1773f&d_ckId=a9a54a63b6466b81a581384304f1773f&d_sfrom=search_prime&d_curPage=0&curPage=0'
+url = 'https://www.liepin.com/zhaopin/?pubTime=&compkind=&fromSearchBtn=2&ckid=6bfdc8b44246ff83&searchType=1&dqs=&compIds=1663745&jobKind=&sortFlag=15&salary=&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&headckid=b477f3060083bfdc&isAnalysis=&init=-1&industryType=&degradeFlag=0&industries=&compscale=&clean_condition=&d_pageSize=40&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_headId=a9a54a63b6466b81a581384304f1773f&d_ckId=a9a54a63b6466b81a581384304f1773f&d_sfrom=search_prime&d_curPage=0&curPage=0'
 
-url_head = 'https://www.liepin.com/zhaopin/?pubTime=&ckid=c99d18de175b6fcc&fromSearchBtn=2&compkind=&searchType=1&dqs=&compIds=2036768&jobKind=&sortFlag=15&salary=&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&headckid=b477f3060083bfdc&isAnalysis=&init=-1&industryType=&degradeFlag=0&industries=&compscale=&clean_condition=&d_pageSize=40&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_headId=a9a54a63b6466b81a581384304f1773f&d_ckId=a9a54a63b6466b81a581384304f1773f&d_sfrom=search_prime&d_curPage=0&curPage='
+url_head = 'https://www.liepin.com/zhaopin/?pubTime=&compkind=&fromSearchBtn=2&ckid=6bfdc8b44246ff83&searchType=1&dqs=&compIds=1663745&jobKind=&sortFlag=15&salary=&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&headckid=b477f3060083bfdc&isAnalysis=&init=-1&industryType=&degradeFlag=0&industries=&compscale=&clean_condition=&d_pageSize=40&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_headId=a9a54a63b6466b81a581384304f1773f&d_ckId=a9a54a63b6466b81a581384304f1773f&d_sfrom=search_prime&d_curPage=0&curPage='
 
 def excel_write(items,index):
     for item in items:
@@ -35,7 +35,7 @@ def excel_write(items,index):
         index+=1
 
 
-newTable="meituan_bd.xls"
+newTable="jingdong_bd.xls"
 wb = xlwt.Workbook(encoding='utf-8')
 ws = wb.add_sheet('sheet1')
 headData = ['职位', '链接', '薪资', '发布时间', '公司']
@@ -52,7 +52,7 @@ for page_num in range(0, spider.page_num(url)):
 excel_write(items,index)
 wb.save(newTable)
 
-xd = pd.ExcelFile('meituan_bd.xls')
+xd = pd.ExcelFile('jingdong_bd.xls')
 df = xd.parse()
-with codecs.open('meituan_bd.html','w','utf-8') as html_file:
+with codecs.open('jingdong_bd.html','w','utf-8') as html_file:
         html_file.write(df.to_html(header = True,index = False))
