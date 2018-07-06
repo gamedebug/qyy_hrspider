@@ -5,9 +5,9 @@
 
 软件说明：
 -
-功能：爬取各大招聘网站招聘信息，并生成Excel表格与HTML静态页面
-语言：Python 3
-包支持：pandas，xlwt
+功能：爬取各大招聘网站招聘信息，并在当前脚本目录生成Excel表格与HTML静态页面；
+语言：Python 3；
+包支持：pandas，xlwt.
 
 
 ----------
