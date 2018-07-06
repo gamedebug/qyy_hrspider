@@ -37,7 +37,7 @@ def excel_write(items,index):
         index+=1
 
 
-newTable="huawei.xls"
+newTable="huawei_bd.xls"
 wb = xlwt.Workbook(encoding='utf-8')
 ws = wb.add_sheet('sheet1')
 headData = ['职位', '链接', '薪资', '发布时间', '公司']
@@ -54,7 +54,7 @@ for page_num in range(0, spider.page_num(url)):
 excel_write(items,index)
 wb.save(newTable)
 
-xd = pd.ExcelFile('huawei.xls')
+xd = pd.ExcelFile('huawei_bd.xls')
 df = xd.parse()
-with codecs.open('huawei.html','w','utf-8') as html_file:
+with codecs.open('huawei_bd.html','w','utf-8') as html_file:
         html_file.write(df.to_html(header = True,index = False))
