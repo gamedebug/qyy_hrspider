@@ -22,4 +22,4 @@
 
 Ver20180707: 
 1. 当前只支持从猎聘 (www.liepin.com) 抓取信息；
-2. 已知bug：抓取条目超过1500条，会在生成html时出现编码错误，但Excel表格能正常生成。
+2. 已知bug：生成的html在苹果Safari浏览器上会显示乱码（Chrome、Firefox、Opera测试无异常）；搜索条目大于1500条时，生成html会报编码错误，但生成Excel表格无异常。
