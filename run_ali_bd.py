@@ -56,5 +56,5 @@ wb.save(newTable)
 
 xd = pd.ExcelFile('alibaba.xls')
 df = xd.parse()
-with codecs.open('alibaba.html','w','gb2312') as html_file:
+with codecs.open('alibaba.html','w','utf-8') as html_file:
         html_file.write(df.to_html(header = True,index = False))

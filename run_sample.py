@@ -13,7 +13,7 @@
 # Executable script, created by
 # Louis (luyisi@1000cc.net) on Sat Jul  7 1:32:26 2018.
 
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # coding=utf-8
 from liepin_spider import LiepinSpider
 import sys
@@ -25,9 +25,9 @@ import codecs
 
 spider = LiepinSpider()
 
-url = 'https://www.liepin.com/zhaopin/?pubTime=&ckid=503fd36933026680&fromSearchBtn=2&compkind=&isAnalysis=&init=-1&searchType=1&dqs=&industryType=&jobKind=&sortFlag=15&degradeFlag=0&industries=&salary=&compscale=&key=Linux&clean_condition=&headckid=503fd36933026680&d_pageSize=40&siTag=7cnwpaXVd5e_aONzZHQ4MQ~fA9rXquZc5IkJpXC-Ycixw&d_headId=d5aaad8a9e4109a2682db2e5e7b0a2e6&d_ckId=d5aaad8a9e4109a2682db2e5e7b0a2e6&d_sfrom=search_prime&d_curPage=0&curPage=0'
+url = 'https://www.liepin.com/zhaopin/?pubTime=&ckid=23804cb824ab5653&fromSearchBtn=2&compkind=&isAnalysis=&init=-1&searchType=1&dqs=&industryType=&jobKind=&sortFlag=15&degradeFlag=1&industries=&salary=&compscale=&key=%E5%8C%BB%E7%96%97%E9%AB%98%E7%AE%A1&clean_condition=&headckid=23804cb824ab5653&d_pageSize=40&siTag=QobdBBCSwdz_oUU39RPZig~fA9rXquZc5IkJpXC-Ycixw&d_headId=b89e5de353b021bdc020475740de3842&d_ckId=b89e5de353b021bdc020475740de3842&d_sfrom=search_prime&d_curPage=0&curPage=0'
 
-url_head = 'https://www.liepin.com/zhaopin/?pubTime=&ckid=503fd36933026680&fromSearchBtn=2&compkind=&isAnalysis=&init=-1&searchType=1&dqs=&industryType=&jobKind=&sortFlag=15&degradeFlag=0&industries=&salary=&compscale=&key=Linux&clean_condition=&headckid=503fd36933026680&d_pageSize=40&siTag=7cnwpaXVd5e_aONzZHQ4MQ~fA9rXquZc5IkJpXC-Ycixw&d_headId=d5aaad8a9e4109a2682db2e5e7b0a2e6&d_ckId=d5aaad8a9e4109a2682db2e5e7b0a2e6&d_sfrom=search_prime&d_curPage=0&curPage='
+url_head = 'https://www.liepin.com/zhaopin/?pubTime=&ckid=23804cb824ab5653&fromSearchBtn=2&compkind=&isAnalysis=&init=-1&searchType=1&dqs=&industryType=&jobKind=&sortFlag=15&degradeFlag=1&industries=&salary=&compscale=&key=%E5%8C%BB%E7%96%97%E9%AB%98%E7%AE%A1&clean_condition=&headckid=23804cb824ab5653&d_pageSize=40&siTag=QobdBBCSwdz_oUU39RPZig~fA9rXquZc5IkJpXC-Ycixw&d_headId=b89e5de353b021bdc020475740de3842&d_ckId=b89e5de353b021bdc020475740de3842&d_sfrom=search_prime&d_curPage=0&curPage='
 
 def excel_write(items,index):
     for item in items:
@@ -56,5 +56,5 @@ wb.save(newTable)
 
 xd = pd.ExcelFile('sample.xls')
 df = xd.parse()
-with codecs.open('sample.html','w','gb2312') as html_file:
+with codecs.open('sample.html','w','utf-8') as html_file:
         html_file.write(df.to_html(header = True,index = False))
