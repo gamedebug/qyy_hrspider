@@ -1,4 +1,4 @@
-#!/usr/bin/env Python
+#!/usr/bin/env python3
 # coding=utf-8
 from liepin_spider import LiepinSpider
 import sys
