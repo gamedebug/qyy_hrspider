@@ -11,8 +11,6 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-#!/usr/bin/env python
-# coding=utf-8
 from liepin_spider import LiepinSpider
 import sys
 import xlwt
