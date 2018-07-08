@@ -11,23 +11,29 @@ Python 3.x
 - 第三方包支持：
 pandas
 xlwt
+xlrd
 codecs
 
 ----------
 版本历史及功能描述
 -
 
+
+----------
+**20180707u1**
+- 缺陷修复： 修复了Safari、Foxfire显示乱码问题。
+
 ----------
 **20180707**
 - 支持网站：猎聘 (www.liepin.com) ；
-- 缺陷：生成的html在苹果Safari浏览器上会显示乱码（Chrome、Firefox、Opera测试无异常）；搜索条目大于1500条时，生成html会报编码错误，但生成Excel表格无异常。
+- 缺陷：生成的html在苹果Safari和Firefox浏览器上会显示乱码（Chrome、Opera测试无异常）；搜索条目大于1500条时，生成html会报编码错误，但生成Excel表格无异常。
 
 ----------
 用法
 -
 
 ----------
-**运行环境检查**
+**运行环境检查与配置**
 - Windows：
 - Linux：
 - macOS：
