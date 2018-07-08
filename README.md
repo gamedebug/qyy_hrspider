@@ -11,6 +11,7 @@ Python 3.x
 - 第三方包支持：
 pandas
 xlwt
+xlrd
 codecs
 
 ----------
