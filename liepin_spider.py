@@ -29,8 +29,8 @@ class LiepinSpider:
 
     def get(self, html):
 
-        reg = '<h3 title="(.*?)">.*?'
-        reg += '<a href="(.*?)".*?'
+        reg = '<h3 title=".*?">.*?<a href="(.*?)".*?'
+        reg += '>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t(.*?)</a>.*?</h3>.*?'
         reg += '<span class="text-warning">(.*?)</span>.*?'
         reg += '<time title="(.*?)">.*?</time>.*?'
         reg += '<a title="公司(.*?)"'

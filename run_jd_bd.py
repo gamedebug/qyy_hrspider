@@ -35,7 +35,7 @@ def excel_write(items,index):
 newTable="jingdong_bd.xls"
 wb = xlwt.Workbook(encoding='utf-8')
 ws = wb.add_sheet('sheet1')
-headData = ['职位', '链接', '薪资', '发布时间', '公司']
+headData = ['链接', '职位', '薪资', '发布时间', '公司']
 
 for colnum in range(0, 5):
     ws.write(0, colnum, headData[colnum], xlwt.easyxf('font: bold on'))
