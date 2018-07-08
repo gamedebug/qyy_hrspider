@@ -28,7 +28,7 @@ def excel_write(items,index):
     for item in items:
         for i in range(0,5):
             ws.write(index,i,item[i])
-        print(index)
+        # print(index)
         index+=1
 
 
