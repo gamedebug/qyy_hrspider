@@ -10,7 +10,7 @@ echo "任务二开始..."
 python3 run_baidu_bd.py
 echo "任务二完成!!!"
 echo "任务三开始..."
-python3 run_didi_bd.py
+python3 run_toutiao_bd.py
 echo "任务三完成!!!"
 echo "任务四开始..."
 python3 run_huawei_bd.py
