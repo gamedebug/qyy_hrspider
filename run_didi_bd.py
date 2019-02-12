@@ -20,9 +20,9 @@ import codecs
 
 spider = LiepinSpider()
 
-url = 'https://www.liepin.com/zhaopin/?pubTime=&compkind=&fromSearchBtn=2&ckid=b2040d5e12fd1a52&searchType=1&dqs=&compIds=8076624&jobKind=&sortFlag=15&salary=&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&headckid=b477f3060083bfdc&isAnalysis=&init=-1&industryType=&degradeFlag=0&industries=&compscale=&clean_condition=&d_pageSize=40&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_headId=a9a54a63b6466b81a581384304f1773f&d_ckId=a9a54a63b6466b81a581384304f1773f&d_sfrom=search_prime&d_curPage=0&curPage=0'
+url = 'https://www.liepin.com/zhaopin/?init=-1&headckid=7fc814d19d921d2b&fromSearchBtn=2&imscid=R000000058&ckid=0a3a41d74f2ab64c&degradeFlag=0&compIds=7863078&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_sfrom=search_fp_bar&d_ckId=ee96383071286e7d10669e2481ff708a&d_curPage=0&d_pageSize=40&d_headId=ee96383071286e7d10669e2481ff708a&curPage=0'
 
-url_head = 'https://www.liepin.com/zhaopin/?pubTime=&compkind=&fromSearchBtn=2&ckid=b2040d5e12fd1a52&searchType=1&dqs=&compIds=8076624&jobKind=&sortFlag=15&salary=&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&headckid=b477f3060083bfdc&isAnalysis=&init=-1&industryType=&degradeFlag=0&industries=&compscale=&clean_condition=&d_pageSize=40&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_headId=a9a54a63b6466b81a581384304f1773f&d_ckId=a9a54a63b6466b81a581384304f1773f&d_sfrom=search_prime&d_curPage=0&curPage='
+url_head = 'https://www.liepin.com/zhaopin/?init=-1&headckid=7fc814d19d921d2b&fromSearchBtn=2&imscid=R000000058&ckid=0a3a41d74f2ab64c&degradeFlag=0&compIds=7863078&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_sfrom=search_fp_bar&d_ckId=ee96383071286e7d10669e2481ff708a&d_curPage=0&d_pageSize=40&d_headId=ee96383071286e7d10669e2481ff708a&curPage='
 
 def excel_write(items,index):
     for item in items:
