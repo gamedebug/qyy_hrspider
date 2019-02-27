@@ -22,7 +22,7 @@ spider = LiepinSpider()
 
 url = 'https://www.liepin.com/zhaopin/?pubTime=&ckid=c99d18de175b6fcc&fromSearchBtn=2&compkind=&searchType=1&dqs=&compIds=2036768&jobKind=&sortFlag=15&salary=&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&headckid=b477f3060083bfdc&isAnalysis=&init=-1&industryType=&degradeFlag=0&industries=&compscale=&clean_condition=&d_pageSize=40&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_headId=a9a54a63b6466b81a581384304f1773f&d_ckId=a9a54a63b6466b81a581384304f1773f&d_sfrom=search_prime&d_curPage=0&curPage=0'
 
-url_head = 'https://www.liepin.com/zhaopin/?pubTime=&ckid=c99d18de175b6fcc&fromSearchBtn=2&compkind=&searchType=1&dqs=&compIds=2036768&jobKind=&sortFlag=15&salary=&key=%E5%A4%A7%E6%95%B0%E6%8D%AE&headckid=b477f3060083bfdc&isAnalysis=&init=-1&industryType=&degradeFlag=0&industries=&compscale=&clean_condition=&d_pageSize=40&siTag=LGV-fc5u_67LtFjetF6ACg~fA9rXquZc5IkJpXC-Ycixw&d_headId=a9a54a63b6466b81a581384304f1773f&d_ckId=a9a54a63b6466b81a581384304f1773f&d_sfrom=search_prime&d_curPage=0&curPage='
+url_head = url[:-1]
 
 def excel_write(items,index):
     for item in items:
