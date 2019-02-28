@@ -38,7 +38,7 @@ def excel_write(items,index):
         index+=1
 
 
-newTable="task_name.xls"
+newTable = excel_file
 wb = xlwt.Workbook(encoding='utf-8')
 ws = wb.add_sheet('sheet1')
 headData = ['链接', '职位', '薪资', '发布时间', '公司']
