@@ -20,9 +20,9 @@ import codecs
 
 spider = LiepinSpider()
 
-task_name = raw_input("Input your task name: ")
+task_name = input("Input your task name: ")
 
-url = raw_input("Input the URL of search result page: ")
+url = input("Input the URL of search result page: ")
 
 url_head = url[:-1]
 
