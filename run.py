@@ -26,6 +26,10 @@ url = raw_input("Input the URL of search result page: ")
 
 url_head = url[:-1]
 
+excel_file = task_name + '.xls'
+
+html_file = task_name + '.html'
+
 def excel_write(items,index):
     for item in items:
         for i in range(0,5):
@@ -51,12 +55,12 @@ for page_num in range(0, spider.page_num(url)):
 excel_write(items,index)
 wb.save(newTable)
 
-xd = pd.ExcelFile(task_name'.xls')
+xd = pd.ExcelFile(excel_file)
 df = xd.parse()
-with codecs.open(task_name'.html','w','utf-8') as html_file:
+with codecs.open(html_file,'w','utf-8') as html_file:
     html_file.write(df.to_html(header = True,index = False))
 
-with open(task_name'.html', 'r+') as f:
+with open(html_file, 'r+') as f:
     content = f.read()
     f.seek(0, 0)
     f.write('<meta charset="UTF-8">'+content)
