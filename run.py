@@ -57,8 +57,8 @@ wb.save(newTable)
 
 xd = pd.ExcelFile(excel_file)
 df = xd.parse()
-with codecs.open(html_file,'w','utf-8') as html_file:
-    html_file.write(df.to_html(header = True,index = False))
+with codecs.open(html_file,'w','utf-8') as html_obj:
+    html_obj.write(df.to_html(header = True,index = False))
 
 with open(html_file, 'r+') as f:
     content = f.read()

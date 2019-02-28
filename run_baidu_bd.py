@@ -51,8 +51,8 @@ wb.save(newTable)
 
 xd = pd.ExcelFile('baidu_bd.xls')
 df = xd.parse()
-with codecs.open('baidu_bd.html','w','utf-8') as html_file:
-    html_file.write(df.to_html(header = True,index = False))
+with codecs.open('baidu_bd.html','w','utf-8') as html_obj:
+    html_obj.write(df.to_html(header = True,index = False))
 
 with open('baidu_bd.html', 'r+') as f:
     content = f.read()
