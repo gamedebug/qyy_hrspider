@@ -48,5 +48,5 @@ class LiepinSpider:
         html = res.read().decode('utf-8')
         reg = re.compile(r'<a class="last" href=".*curPage=(.*?)" title="末页">',re.S)
         items = re.findall(reg,html)
-        page_num = int(items[0])
+        page_num = int(items[0]) + 1
         return page_num
